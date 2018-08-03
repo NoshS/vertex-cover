@@ -1,5 +1,4 @@
 def find_vc(input_graph):
-	#'''This function finds the vertex cover '''
     cover = []
     valid, num_edge = valid_cover(input_graph, cover)
     
@@ -11,7 +10,7 @@ def find_vc(input_graph):
     return cover
 
 def valid_cover(graph, cover):
-	##'''Goes through the upper right triangle of the matrix finding the edges '''
+	'''Goes through the upper right triangle of the matrix finding the edges '''
     valid = True
     num_edge = [0] * len(graph)
     for i in range(0, len(graph)):
@@ -25,14 +24,11 @@ def valid_cover(graph, cover):
 
 
 def vcCondition(vertexCover,k):
-	#'''Checks the condition whehter or not vertex cover is less thank or equal to k. it returns true for the first case, and false for the latter'''
-	if len(vertexCover) <= k:
-	    return True
-	else:
-		return False
+	'''Checks the condition whehter or not vertex cover is less thank or equal to k. it returns true for the first case, and false for the latter'''
+	return len(vertexCover) <= k:
+	    
 
 def run():
-	#''' The main part '''
 	k = int(raw_input('Enter a value for k: '))
 
 	#Self defined graph here. Feel free to change it to your liking. This is using an adjacency matrix to represent the graph. 
